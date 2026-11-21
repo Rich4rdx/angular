@@ -1,27 +1,34 @@
-# Lisa
+# 📝 Lista de tareas: comunicación entre componentes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Lista de tareas en Angular para practicar cómo se comunican un componente **padre** y un componente **hijo**. El hijo captura el texto y lo envía al padre con `@Output` y `EventEmitter`; el padre guarda la lista, la muestra con `*ngFor` y permite eliminar tareas.
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular_16-DD0031?style=flat&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Qué practiqué
 
-## Code scaffolding
+- Emitir eventos del hijo al padre con `@Output()` y `EventEmitter`
+- Enlace de datos bidireccional con `[(ngModel)]`
+- Renderizado de listas con `*ngFor` y uso del índice para eliminar elementos
+- Validación sencilla para no agregar tareas vacías
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Estructura
 
-## Build
+```
+src/app/componentes/
+├── padre/   → Guarda la lista de tareas, la muestra y elimina
+└── hijo/    → Campo de texto que emite la nueva tarea
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Cómo ejecutarlo
 
-## Running unit tests
+```bash
+npm install
+npx ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Abre http://localhost:4200.
 
-## Running end-to-end tests
+## Autor
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Richard**: [github.com/Rich4rdx](https://github.com/Rich4rdx)
